@@ -28,7 +28,7 @@ const sharm = 15;
 const hurgada = 25;
 const taba = 6;
 
-let places = +prompt('введите число мест');
+let places = Number(prompt('введите число мест'));
 let choise = null;
 let vacation = null;
 
@@ -38,7 +38,7 @@ if(places === null){
     choise = -2;    //чтобы срабатывал else
 }
 else if(places <= taba){
-    choise = +prompt('Есть места в 3-ех группах(1 - taba, 2 - sharm, 3 - hurgaba)');
+    choise = Number(prompt('Есть места в 3-ех группах(1 - taba, 2 - sharm, 3 - hurgaba)'));
 ///////////////Этот скрипт я копировал несколько раз
     if (choise === 1){
         vacation = 'taba';
@@ -49,7 +49,7 @@ else if(places <= taba){
     }
 ////////////////////
 }else if(places <= sharm){
-    choise = prompt('Есть места в 2-ух группах(1 - sharm, 2 - hurgaba)');
+    choise = Number(prompt('Есть места в 2-ух группах(1 - sharm, 2 - hurgaba)'));
 /////////////////////////////
     if (choise === 1){
         vacation = 'sharm';
