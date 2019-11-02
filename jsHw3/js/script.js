@@ -15,8 +15,8 @@ const isLoginValid = newLogin =>{
 
 
 
-const isLoginUnique = (logins,newLogin) => {
-    if(isLoginValid() === true){
+const isLoginUnique = (newLogin) => {
+    if(isLoginValid(login) === true){
         if(logins.includes(newLogin) === true ){
             return false;
         }else{
@@ -27,17 +27,20 @@ const isLoginUnique = (logins,newLogin) => {
     }
 } 
 
-const addLogin = (logins,newLogin) =>{
-    if (isLoginUnique() === true){
+const addLogin = (newLogin) =>{
+    if (isLoginUnique(login) === true){
         logins.push(newLogin);
         console.log(logins);
+    } else if(isLoginValid(login)=== false){
+        console.log('login isnt valid');
+    }else if(isLoginUnique(login)===false){
+        console.log('login isnt unique');
     }
 }
 
 
 
-isLoginValid(login);
-isLoginUnique(logins,login);
-addLogin(logins,login);
-console.log(logins);
+
+addLogin(login);
+
 
