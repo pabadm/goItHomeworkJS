@@ -22,8 +22,7 @@ class Car {
         return this._price = value;
     }
     turnOn() {
-        this._is0n = true;
-        return this._isOn;
+    return this._is0n = true;
     }
     turnOff(){
         this._isOn = false;
